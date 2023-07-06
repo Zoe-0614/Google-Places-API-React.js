@@ -55,4 +55,4 @@ To enhance performance, techniques like code-splitting, lazy loading of componen
 
 - **End-to-End Testing:** This testing ensures that the application works as expected from start to finish. Tools such as Cypress or Puppeteer are ideal for this purpose as they automate browser interactions with the application.
 
--**Manual Testing:** Although automated testing is a key component of the testing process, manual testing is also essential to identify unanticipated issues and test usability.
+- **Manual Testing:** Although automated testing is a key component of the testing process, manual testing is also essential to identify unanticipated issues and test usability.
