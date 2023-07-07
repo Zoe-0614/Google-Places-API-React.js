@@ -15,22 +15,24 @@ const SearchBar = ({ onPlaceSelect }) => {
     }
   };
 
-  const handlePredictionSelect = (place) => {
+  const handlePredictionSelect = async (place) => {
     setInput(place.description);
     setPredictions([]);
-    onPlaceSelect(place);
+    const placeDetailsRes = await axios.get(`http://localhost:5000/api/placeDetails?place_id=${place.place_id}`);
+    onPlaceSelect(placeDetailsRes.data);
   };
 
   return (
-    <div>
+    <div className="search-bar-container">
       <input
         type="text"
         value={input}
         onChange={fetchPlaces}
+        className="search-bar-input"
         placeholder="Search places..."
       />
       {predictions.length > 0 && (
-        <ul>
+        <ul className="predictions">
           {predictions.map((place) => (
             <li key={place.place_id} onClick={() => handlePredictionSelect(place)}>
               {place.description}
