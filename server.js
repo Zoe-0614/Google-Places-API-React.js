@@ -14,4 +14,4 @@ app.get('/api/places', async (req, res) => {
   res.json(response.data);
 });
 
-app.listen(3000, () => console.log('Server running on port 5000'));
+app.listen(5000, () => console.log('Server running on port 5000'));
